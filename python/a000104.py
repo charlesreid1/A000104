@@ -365,7 +365,8 @@ def main():
     N = int(sys.argv[1])
     a, F, R2, R4, M, D = terms(N)
     if "--check" in sys.argv:
-        b104, b6724 = read_bfile(DATA / "b000104.txt"), read_bfile(DATA / "b006724.txt")
+        b104 = read_bfile(DATA / "b000104.original.txt")
+        b6724 = read_bfile(DATA / "b006724.original.ERROR.txt")
         bad = [n for n in range(N + 1) if n in b104 and a[n] != b104[n]]
         bad += [n for n in range(1, N + 1) if n in b6724 and F[n] != b6724[n]]
         nb = min(N, 11)
@@ -373,7 +374,7 @@ def main():
             if n and row != [F[n], a[n], R2[n], R4[n], M[n], D[n]]:
                 bad.append(n)
         print(
-            f"# checked against b-files and brute force (n <= {nb}):",
+            f"# checked against the OEIS b-files and brute force (n <= {nb}):",
             "OK" if not bad else f"MISMATCH at {sorted(set(bad))}",
             file=sys.stderr,
         )

@@ -1,5 +1,5 @@
-# n F(n) R2(n) R4(n) M(n) D(n) a(n). F from b006724.txt (Jensen); R2, R4, M, D from the rust search
-# (components 42 --fixed-from ../data/b006724.txt, 1843 s on an M4 Pro). a(42) = 0: its Burnside sum is not a multiple of 8.
+# n F(n) R2(n) R4(n) M(n) D(n) a(n). F from b006724.original.ERROR.txt (Jensen); R2, R4, M, D from the rust search
+# (components 42 --fixed-from ../data/b006724.original.ERROR.txt, 1843 s on an M4 Pro). a(42) = 0: its Burnside sum is not a multiple of 8.
 0 0 0 0 0 0 1
 1 1 1 1 1 1 1
 2 2 2 0 2 0 1

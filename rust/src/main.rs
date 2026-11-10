@@ -73,7 +73,7 @@ struct Run {
     /// Skip merging states with their mirror images.
     #[arg(long)]
     no_merge: bool,
-    /// Compare with b000104.txt and b006724.txt in this directory.
+    /// Compare with the OEIS b-files b000104.original.txt and b006724.original.ERROR.txt in DIR.
     #[arg(long, value_name = "DIR")]
     check: Option<PathBuf>,
     #[command(flatten)]
@@ -590,7 +590,10 @@ fn run_terms(run: Run, components: bool) -> ExitCode {
 
 fn check(dir: &std::path::Path, out: &Terms) -> bool {
     let mut ok = true;
-    for (name, values, first) in [("b000104.txt", &out.a, 0), ("b006724.txt", &out.f, 1)] {
+    for (name, values, first) in [
+        ("b000104.original.txt", &out.a, 0),
+        ("b006724.original.ERROR.txt", &out.f, 1),
+    ] {
         match bfile::read(&dir.join(name)) {
             Ok(b) => {
                 let bad: Vec<usize> = (first..values.len())

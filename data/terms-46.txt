@@ -2,7 +2,7 @@
 # Reproduce, from the top directory: n = 41 and 42 with python3 checks.py crt data/components-42.txt data/residues-42*.txt;
 # n = 43 to 46 are rows of data/components-46.txt (the n = 46 run on EC2), which python3 checks.py compare checks.
 # A000104 and A001419: new terms (both b-files end at n = 40). A001419 = A000105 - A000104.
-# A006724: n = 42 is a correction (b006724.txt and Jensen's square.area.ser give 134071571821918373415776); 43 to 46 are new.
+# A006724: n = 42 is a correction (b006724.original.ERROR.txt and Jensen's square.area.ser give 134071571821918373415776); 43 to 46 are new.
 # sequence n value
 A000104 41 4320025486567288556616
 A000104 42 16758946477869251303088

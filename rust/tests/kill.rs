@@ -247,7 +247,7 @@ fn runs_spilled_to_another_volume_killed_inside_writes_resume() {
     killed_inside_writes("inside-other", &on_disk(&spill.0));
 }
 
-/// Jensen's A006724 b-file, so that `components --fixed-from` runs the search alone.
+/// The A006724 b-file, so that `components --fixed-from` runs the search alone.
 const FIXED: &str = concat!(env!("CARGO_MANIFEST_DIR"), "/../data/b006724.txt");
 
 /// The unit files in `dir`, by name, with their contents.

@@ -22,9 +22,9 @@ The method and the plan are in `../a000104.md`.
 cargo build --release
 B=target/release/a000104
 
-$B terms 28 --check ../data                         # a(0..=28), checked against the b-files in ../data
+$B terms 28 --check ../data                         # a(0..=28), checked against the OEIS b-files in ../data
 $B components 32                                   # n, F, R2, R4, M, D, a(n)
-$B components 41 --fixed-from ../data/b006724.txt  # F from Jensen's b-file (its F(42) is wrong); R2, R4, M, D by search
+$B components 41 --fixed-from ../data/b006724.txt  # F from the A006724 b-file; R2, R4, M, D by search
 $B fixed 32                                        # F(1..=32), A006724, in b-file format
 $B fixed 42 --counts 16                            # the same from six 16-bit runs, in a third of the memory
 $B terms 24 --r2 both                              # R2 from the sweep and from the search, which must agree
