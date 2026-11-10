@@ -1,0 +1,7 @@
+# Build with pdfLaTeX; latexmk runs biber automatically when biblatex needs it.
+# Intermediates go into ./build/, the final PDF stays at the top level.
+$pdf_mode = 1;
+$bibtex_use = 2;
+$aux_dir = 'build';
+$out_dir = '.';
+@default_files = ('a000104.tex');
